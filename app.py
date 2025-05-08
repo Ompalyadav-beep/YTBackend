@@ -22,9 +22,13 @@ async def install_browsers():
 asyncio.run(install_browsers())
 
 # --- CORS Configuration ---
-# Allow requests from any origin for now to diagnose issues
-# In production, you should restrict this to specific domains
-CORS(app, supports_credentials=True, origins="*")
+# Allow requests from specific origins
+CORS(app, supports_credentials=True, origins=[
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "https://cosmic-belekoy-dd73ee.netlify.app",
+    "https://glittering-torrone-6c12c8.netlify.app"  # Added new Netlify domain
+])
 
 def load_trending_data():
     data = []
