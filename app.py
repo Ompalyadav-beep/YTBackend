@@ -25,11 +25,12 @@ asyncio.run(install_browsers())
 # Allow requests from your frontend's origin.
 # For development, you can be permissive, but be more specific in production.
 CORS(app, supports_credentials=True, origins=[
-    "http://127.0.0.1:5500", 
-    "http://localhost:5500", 
-    "null", 
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "null",
     "https://cosmic-belekoy-dd73ee.netlify.app",
-    "https://youtube-dashboard.netlify.app"
+    "https://youtube-dashboard.netlify.app",
+    "https://glittering-torrone-6c12c8.netlify.app"
 ])
 
 def load_trending_data():
